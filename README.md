@@ -1,6 +1,5 @@
 # README — SWOT–ICESat-2 Matches
-Author: Fran Amor  
-Affiliation: UiT The Arctic University of Norway, Tromsø  
+
 
 ## Overview
 This repository provides tools and workflows to analyze matching passes of ICESat-2 (ATL03) and SWOT (Surface Water and Ocean Topography) over sea ice.
