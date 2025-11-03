@@ -117,7 +117,7 @@ Overall... lets say time uncertainty is approximate within ±10 minutes. For the
 The notebook then:
 1. Loads both Unsmoothed and Expert SWOT data.
 2. Interpolates geophysical corrections from Expert to Unsmoothed.
-3. Applies corrections to obtain SSHA (Sea Surface Height Anomaly).
+3. Applies corrections to obtain SSHA (Sea Surface Height Anomaly). Note each product its reference to its own mss.
 4. Loads ATL03 photons, applies geophysical corrections, and smooths them (500-sample moving window, using photons with sea_ice_conf > 1).
 5. Finds ICESat-2 photons within the SWOT swath and computes nearest-neighbor SWOT–IS2 matches.
 
