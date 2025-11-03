@@ -5,9 +5,14 @@ Affiliation: UiT The Arctic University of Norway, Tromsø
 ## Overview
 This repository provides tools and workflows to analyze matching passes of ICESat-2 (ATL03) and SWOT (Surface Water and Ocean Topography) over sea ice.
 
-It automates data download, subsetting, and co-location of SWOT and ICESat-2 measurements to support sea-ice elevation and SSH anomaly analyses.
+It contains data download, subsetting, and co-location of SWOT and ICESat-2 measurements to support sea-ice elevation and SSH anomaly analyses.
+
+An example web visualizatin of matching measurements can be found here:
+https://franamor98.github.io/Sea_ice_Viz/#8/73.053/-139.614
 
 ## Repository Structure
+```bash
+
 .
 ├── config
 │   ├── Is2_conf.json
@@ -26,6 +31,7 @@ It automates data download, subsetting, and co-location of SWOT and ICESat-2 mea
         ├── Is2_utils.py
         ├── process_swot_files.py
         └── swot_utils.py
+```
 
 ## Installation
 It is recommended to use conda:
