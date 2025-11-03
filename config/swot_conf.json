@@ -1,0 +1,7 @@
+{
+  "product": "SWOT_L2_LR_SSH_2.0",
+  "spatial_extent": [-150, 70, -130, 76],
+  "date_range": ["2024-02-01", "2024-02-15"],
+  "filter": "Unsmoothed",
+  "download_path": "./data/SWOT/L2_LR_SSH_2.0/"
+}

@@ -1,0 +1,6 @@
+{
+   "product": "ATL03",
+  "spatial_extent": [-150, 70, -130, 76],
+  "date_range": ["2024-02-01", "2024-04-16"],
+  "download_path": "./data/IS2/ATL03_2"
+}
