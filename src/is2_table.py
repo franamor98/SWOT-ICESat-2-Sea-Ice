@@ -52,7 +52,7 @@ def pick_strong_beam(h5path):
     return beams[0] if beams else None
 
 
-def extract_track(h5path, max_points=50000):
+def extract_track(h5path):
     """Extract a simplified LineString from a strong beam."""
     fname = os.path.basename(h5path)
     parts = fname.replace(".h5", "").split("_")
@@ -71,11 +71,11 @@ def extract_track(h5path, max_points=50000):
     try:
         with h5py.File(h5path, "r") as f:
             if "ATL03" in product:
-                lat = f[f"{beam}/heights/lat_ph"][:]
-                lon = f[f"{beam}/heights/lon_ph"][:]
+                lat = f[f"{beam}/heights/lat_ph"][::200]
+                lon = f[f"{beam}/heights/lon_ph"][::200]
             elif "ATL07" in product:
-                lat = f[f"{beam}/sea_ice_segments/latitude"][:]
-                lon = f[f"{beam}/sea_ice_segments/longitude"][:]
+                lat = f[f"{beam}/sea_ice_segments/latitude"][::50]
+                lon = f[f"{beam}/sea_ice_segments/longitude"][::50]
             else:
                 return None
     except Exception as e:
@@ -89,8 +89,6 @@ def extract_track(h5path, max_points=50000):
         return None
 
     lon = ((lon + 180) % 360) - 180  # normalize
-    idx = np.linspace(0, len(lat) - 1, min(max_points, len(lat))).astype(int)
-    lat, lon = lat[idx], lon[idx]
 
     line = LineString(zip(lon, lat))
     return {
